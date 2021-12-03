@@ -1,10 +1,10 @@
 // Desafio 1
-function compareTrue(p1,p2) {
-    if(p1 === true && p2 === true) {
-      return true
-    } else{
-      return false
-    }
+function compareTrue(p1, p2) {
+  if (p1 === true && p2 === true) {
+    return true
+  } else {
+    return false
+  }
 }
 
 
@@ -62,13 +62,40 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+
+// a função Math.abs foi encontrada referencias neste link: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = Math.abs(mouse - cat1);
+  let distanciaCat2 = Math.abs(mouse - cat2);
+
+  if (distanciaCat1 < distanciaCat2){
+    return 'cat1'
+    }else if (distanciaCat1 > distanciaCat2){
+    return 'cat2'
+  } else if(distanciaCat1 == distanciaCat2) {
+    return "os gatos trombam e o rato foge"
+  };
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+
+//referencia do for/of tirada do stackoverflow, onde neste caso organizou a varredura no array pelo valor dele: https://pt.stackoverflow.com/questions/90352/qual-%c3%a9-a-diferen%c3%a7a-entre-o-for-of-e-o-for-in
+function fizzBuzz(numbers) {
+
+ let resultado = [];
+  for(let num of numbers) {
+    if(num %3 == 0 && num %5 == 0) {
+     resultado.push('fizzBuzz')
+    } else if (num %5 == 0) {
+      resultado.push('buzz')
+    } else if (num %3 == 0) {
+      resultado.push('fizz')
+    } else {
+      resultado.push('bug!');
+    }
+  }
+return resultado;
 }
 
 // Desafio 9
