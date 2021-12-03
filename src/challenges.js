@@ -99,11 +99,38 @@ return resultado;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+
+   let stringEnc='';
+
+  let codigos= {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  };
+
+  for(let letra of string){
+   stringEnc= stringEnc + (codigos[letra] || letra)
+  };
+
+  return stringEnc;
 }
-function decode() {
-  // seu código aqui
+ 
+function decode(string) {
+  let stringDec ='';
+  let code= {
+    1:"a",
+    2:"e",
+    3:"i",
+    4:"o",
+    5:"u"
+  };
+  for(let num of string){
+   stringDec= stringDec + (code[num] || num)
+  };
+  return stringDec;
 }
 
 module.exports = {
